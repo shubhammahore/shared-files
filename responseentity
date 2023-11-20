@@ -1,0 +1,5 @@
+Map<String, Object> responseBody = new HashMap<>();
+        responseBody.put("timestamp", LocalDateTime.now());
+        responseBody.put("status", HttpStatus.UNAUTHORIZED.value());
+        responseBody.put("error", HttpStatus.UNAUTHORIZED.getReasonPhrase());
+        responseBody.put("message", ex.getMessage()); // This will capture the message from the thrown exception.
